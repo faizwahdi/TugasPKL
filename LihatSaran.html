@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo"><img src="logo_bawaslu_palasah.png" alt=""></div>
+        <div class="login"><a id="loginLink" href="login.html">Log in</a></div>
+    </div>
+
+    <div class="navbar">
+        <a href="index.html">Beranda</a>
+        <a href="profil.html">Profil</a>
+        <div class="dropdown">
+            <a href="#">Lapor</a>
+            <div class="dropdown-content">
+                <a href="Laporkan.html">Laporkan</a>
+                <br>
+                <a id="LihatLaporan" href="LihatLaporan.html">Lihat Laporan</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#">Saran</a>
+            <div class="dropdown-content">
+                <a href="BeriSaran.html">Beri Saran</a>
+                <br>
+                <a id="LihatSaran" href="LihatSaran.html">Lihat Saran</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <b>Data Saran</b>
+    <table>
+        <tr>
+            <th>ID Saran</th>
+            <th>Lihat Detail</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td><button class="Lihat_Detail">👁️</button></td>
+        </tr>
+       
+    </table>
+
+    <h2>Detail Saran</h2>
+    <div id="DetailSaran" style="display: none; background-color:white; text-align: left;"> 
+        <p><strong>Nama:</strong> <span id="DetailNama"></span></p>
+        <p><strong>No. Handphone:</strong> <span id="DetailNoHP"></span></p>
+        <p><strong>Email:</strong> <span id="DetailEmail"></span></p>
+        <p><strong>Saran:</strong></p>
+        <p><span id="DetailSaranText"></span></p>
+        <button id="TutupDetail">Tutup</button>
+    </div>
+
+        
+    </div>   
+    
+
+    <div class="footer">
+        <div>Follow us:</div>
+        <a href=""><img src="LogoIg.png" alt=""></a>
+        <a href="#"><img src="LogoFacebook.jpg" alt=""></a>
+        <a href="#"><img src="LogoTwitter.png" alt=""></a>
+        <div class="alamat_sekre">
+            <p>Jl. Raya Dsa Waringin Simpang Tiga</p>
+            <p>Blok Tajurwangi  RT/RW.  01/08 Desa Waringin </p>
+            <p> Kec. Palasah, Kabupaten Majalengka</p>
+        </div>
+    </div>
+
+    <script>
+        const lihatDetailButtons = document.querySelectorAll('.Lihat_Detail');
+        const detailSaran = document.getElementById('DetailSaran');
+        const detailNama = document.getElementById('DetailNama');
+        const detailNoHP = document.getElementById('DetailNoHP');
+        const detailEmail = document.getElementById('DetailEmail');
+        const detailSaranText = document.getElementById('DetailSaranText');
+        const tutupDetailButton = document.getElementById('TutupDetail');
+
+        lihatDetailButtons.forEach(function(button) {
+            button.addEventListener('click', function() {
+                const idSaran = "1"; 
+                const nama = "nama";
+                const noHP = "no_hp";
+                const email = "email";
+                const saranText = "saran";
+
+                detailNama.textContent = nama;
+                detailNoHP.textContent = noHP;
+                detailEmail.textContent = email;
+                detailSaranText.textContent = saranText;
+
+                // Tampilkan area detail saran
+                detailSaran.style.display = 'inline-block';
+            });
+        });
+
+        tutupDetailButton.addEventListener('click', function() {
+            // Menyembunyikan detal saran
+            detailSaran.style.display = 'none';
+        });
+    </script>
+    <script src="script.js"></script>
+   
+</body>
+</html>

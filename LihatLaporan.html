@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo"><img src="logo_bawaslu_palasah.png" alt=""></div>
+        <div class="login"><a id="loginLink" href="login.html">Log in</a></div>
+    </div>
+
+    <div class="navbar">
+        <a href="index.html">Beranda</a>
+        <a href="profil.html">Profil</a>
+        <div class="dropdown">
+            <a href="#">Lapor</a>
+            <div class="dropdown-content">
+                <a href="Laporkan.html">Laporkan</a>
+                <br>
+                <a id="LihatLaporan" href="LihatLaporan.html">Lihat Laporan</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#">Saran</a>
+            <div class="dropdown-content">
+                <a href="BeriSaran.html">Beri Saran</a>
+                <br>
+                <a id="LihatSaran" href="LihatSaran.html">Lihat Saran</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <b>Data Laporan</b>
+    <table>
+        <tr>
+            <th>ID Laporan</th>
+            <th>Lihat Detail</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td><button class="Lihat_Detail">👀</button></td>
+        </tr>
+        
+    </table>
+
+    <h2>Detail Laporan</h2>
+    <div id="DetailLaporan" style="display: none; background-color:white; text-align: left;">
+        <p><strong>Nama:</strong> <span id="DetailNamaPelapor"></span></p>
+        <p><strong>No. Handphone:</strong> <span id="DetailNoHPPelapor"></span></p>
+        <p><strong>Email:</strong> <span id="DetailEmailPelapor"></span></p>
+        <p><strong>Terlapor:</strong> <span id="DetailNamaTerlapor"></span></p>
+        <p><strong>Foto:</strong> <span id="DetailFoto"></span></p>
+        <p><strong>Deskripsi</strong> <span id="DetailDeskripsiLaporan"></span></p>
+        <p><span id="DetailLaporanText"></span></p>
+        <button id="TutupDetail">Tutup</button>
+    </div>
+
+        
+    </div>   
+    
+
+    <div class="footer">
+        <div>Follow us:</div>
+        <a href=""><img src="LogoIg.png" alt=""></a>
+        <a href="#"><img src="LogoFacebook.jpg" alt=""></a>
+        <a href="#"><img src="LogoTwitter.png" alt=""></a>
+        <div class="alamat_sekre">
+            <div class="">
+                <p>Jl. Raya Dsa Waringin Simpang Tiga</p>
+                <p>Blok Tajurwangi  RT/RW.  01/08 Desa Waringin </p>
+                <p> Kec. Palasah, Kabupaten Majalengka</p>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const lihatDetailButtons = document.querySelectorAll('.Lihat_Detail');
+        const detailLaporan = document.getElementById('DetailLaporan');
+        const detailNamaPelapor = document.getElementById('DetailNamaPelapor');
+        const detailNoHPPelapor = document.getElementById('DetailNoHPPelapor');
+        const detailEmailPelapor = document.getElementById('DetailEmailPelapor');
+        const detailNamaTerlapor = document.getElementById('DetailNamaTerlapor');
+        const detailFoto = document.getElementById('DetailFoto');
+        const detailDeskripsiLaporan = document.getElementById('DetailDeskripsiLaporan');
+        const tutupDetailButton = document.getElementById('TutupDetail');
+
+        lihatDetailButtons.forEach(function(button) {
+            button.addEventListener('click', function() {
+                const idLaporan = "1"; 
+                const namaPelapor = "namaPelapor";
+                const noHPPelapor = "no_hp_pelapor";
+                const emailPelapor = "emailPelapor";
+                const namaTerlapor = "terlapor";
+                const foto = "foto"
+                const deskripsi = "deskripsi"
+
+                detailNamaPelapor.textContent = namaPelapor;
+                detailNoHPPelapor.textContent = noHPPelapor;
+                detailEmailPelapor.textContent = emailPelapor;
+                detailNamaTerlapor.textContent = namaTerlapor;
+                detailFoto.textContent = foto;
+                detailDeskripsiLaporan.textContent = deskripsi;
+
+                // Menampilkan detial laporan
+                detailLaporan.style.display = 'inline-block';
+            });
+        });
+
+        tutupDetailButton.addEventListener('click', function() {
+            // Menyembunyikan detil  laporan
+            detailLaporan.style.display = 'none';
+        });
+    </script>
+    <script src="script.js"></script>
+   
+</body>
+</html>

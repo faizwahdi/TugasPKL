@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo"><img src="logo_bawaslu_palasah.png" alt=""></div>
+        <div class="login"><a id="loginLink" href="login.html">Log in</a></div>
+    </div>
+
+    <div class="navbar">
+        <a href="index.html">Beranda</a>
+        <a href="profil.html">Profil</a>
+        <div class="dropdown">
+            <a href="#">Lapor</a>
+            <div class="dropdown-content">
+                <a href="Laporkan.html">Laporkan</a>
+                <br>
+                <a id="LihatLaporan" href="LihatLaporan.html">Lihat Laporan</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#">Saran</a>
+            <div class="dropdown-content">
+                <a href="BeriSaran.html">Beri Saran</a>
+                <br>
+                <a id="LihatSaran" href="LihatSaran.html">Lihat Saran</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        Beri Saran
+        <form id="FormSaran" action="#" method="post">
+            <label for="Anonymous">Sembunyikan Identitas?</label> 
+            <input type="checkbox" id="Anonymous" name="Anonymous"> 
+            <br>
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" name="nama">
+            <br>
+            <label for="no_hp">No. Handphone:</label>
+            <input type="tel" id="no_hp" name="no_hp">
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <br>
+            <label for="saran">Saran:</label>
+            <textarea id="saran" name="saran" rows="4" cols="50"></textarea>
+            <br>
+            <input type="submit" value="Kirim">
+        </form>
+        
+    </div>   
+    
+
+    <div class="footer">
+        <div>Follow us:</div>
+        <a href=""><img src="LogoIg.png" alt=""></a>
+        <a href="#"><img src="LogoFacebook.jpg" alt=""></a>
+        <a href="#"><img src="LogoTwitter.png" alt=""></a>
+        <div class="alamat_sekre">
+            <p>Jl. Raya Dsa Waringin Simpang Tiga</p>
+            <p>Blok Tajurwangi  RT/RW.  01/08 Desa Waringin </p>
+            <p> Kec. Palasah, Kabupaten Majalengka</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+   
+</body>
+</html>

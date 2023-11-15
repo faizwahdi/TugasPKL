@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">  
+</head>
+<body>
+    <div class="header">
+        <div class="logo"><img src="logo_bawaslu_palasah.png" alt=""></div>
+        <div class="login"><a id="loginLink" href="login.html">Log in</a></div>
+    </div>
+    <div class="navbar">
+        <a href="index.html">Beranda</a>
+        <a href="profil.html">Profil</a>
+        <div class="dropdown">
+            <a href="#">Lapor</a>
+            <div class="dropdown-content">
+                <a href="Laporkan.html">Laporkan</a>
+                <br>
+                <a id="LihatLaporan" href="LihatLaporan.html">Lihat Laporan</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#">Saran</a>
+            <div class="dropdown-content">
+                <a href="BeriSaran.html">Beri Saran</a>
+                <br>
+                <a id="LihatSaran" href="LihatSaran.html">Lihat Saran</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        Formulir Pelaporan
+       
+        <form id="FormLaporkan" action="" method="post" enctype="multipart/form-data">
+            <label for="namaPelapor">Nama:</label>
+            <input type="text" id="namaPelapor" name="namaPelapor" required>
+            <br>
+            <label for="no_hp_pelapor">No. Handphone:</label>
+            <input type="tel" id="no_hp_pelapor" name="no_hp_pelapor" required>
+            <br>
+            <label for="emailPelapor">Email:</label>
+            <input type="email" id="emailPelapor" name="emailPelapor" required>
+            <br>
+            <label for="terlapor">Terlapor:</label>
+            <input type="text" id="terlapor" name="terlapor" required>
+            <br>
+            <label for="foto">Foto:</label>
+            <input type="file" id="foto" name="foto" accept="image/*" required>
+            <br>
+            <label for="deskripsi">Deskripsi Laporan:</label>
+            <textarea id="deskripsi" name="deskripsi" rows="4" required></textarea>
+            <br>
+            <input id="submit_laporan" type="submit" value="Kirim Laporan">
+        </form>
+        
+    </div>   
+    
+
+    <div class="footer">
+        <div>Follow us:</div>
+        <a href=""><img src="LogoIg.png" alt=""></a>
+        <a href="#"><img src="LogoFacebook.jpg" alt=""></a>
+        <a href="#"><img src="LogoTwitter.png" alt=""></a>
+        <div class="alamat_sekre">
+            <p>Jl. Raya Dsa Waringin Simpang Tiga</p>
+            <p>Blok Tajurwangi  RT/RW.  01/08 Desa Waringin </p>
+            <p> Kec. Palasah, Kabupaten Majalengka</p>
+        </div>
+    </div>
+
+   
+</body>
+</html>
+<script src="script.js"></script>
